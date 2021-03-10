@@ -8,12 +8,14 @@
  */
 static int bst_full(const binary_tree_t *tree)
 {
-	if (!tree)
-		return (0);
-	else if (tree->left && tree->right)
+	if (tree->left && tree->right)
+		/* if both branches exits, go deeper! */
 		return (bst_full(tree->left) && bst_full(tree->right));
 	else if (!tree->left && !tree->right)
+		/* if NEITHER branch exits, we say it's full since not the initial root */
 		return (1);
+
+	/* If this return is reached, the subtree is not BALANCED, it is not full */
 	return (0);
 
 }
@@ -28,6 +30,7 @@ int binary_tree_is_full(const binary_tree_t *tree)
 {
 	if (!tree)
 		return (0);
+	/* Only the initial root must have two branches, yes or yes. */
 	if (!tree->left || !tree->right)
 		return (0);
 
