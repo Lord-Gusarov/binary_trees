@@ -21,38 +21,38 @@ static int bt_height(const binary_tree_t *tree)
 	return (height_l > height_r ? height_r : height_l);
 }
 /**
- * process_level - aplies the given function to the data in all node at the
- * leve/depth specified.
+ * process_depth - aplies the given function to the data in all node at the
+ * depth specified.
  * @tree: root of the tree;
- * @level: desired level to visit/process
- * @func: function to apply to each node the specified level
+ * @depth: desired depth to visit/process
+ * @func: function to apply to each node the specified depth
  */
-static void process_level(const binary_tree_t *tree, int level,
+static void process_depth(const binary_tree_t *tree, int depth,
 						  void (*func)(int))
 {
 	if (!tree)
 		return;
-	if (level == 1)
+	if (depth == 1)
 		func(tree->n);
-	else
+	else if (depth > 1)
 	{
-		process_level(tree->left, level - 1, func);
-		process_level(tree->right, level - 1, func);
+		process_depth(tree->left, depth - 1, func);
+		process_depth(tree->right, depth - 1, func);
 	}
 }
 
 /**
- * binary_tree_levelorder - goes through a binary tree using level-order
+ * binary_tree_depthorder - goes through a binary tree using depth-order
  * traversal
  * * @tree: pointer to the root of the tree to traverse
  * @func: pointer to a function to call for eah node
  */
-void binary_tree_levelorder(const binary_tree_t *tree, void (*func)(int))
+void binary_tree_depthorder(const binary_tree_t *tree, void (*func)(int))
 {
 	int i, height;
 
 	height = bt_height(tree);
 
 	for (i = 1; i <= height; i++)
-		process_level(tree, i, func);
+		process_depth(tree, i, func);
 }
