@@ -67,4 +67,22 @@ binary_tree_t *binary_tree_sibling(binary_tree_t *node);
 /* task 18. Uncle */
 binary_tree_t *binary_tree_uncle(binary_tree_t *node);
 
+
+/* Task: 19. Lowest common ancestor (AKA 100) */
+binary_tree_t *binary_trees_ancestor(const binary_tree_t *first, const binary_tree_t *second);
+/* Task 20. Level-order traversal (AKA 101) */
+void binary_tree_levelorder(const binary_tree_t *tree, void (*func)(int));
+/* Task 21. Is complete (AKA 102) */
+int binary_tree_is_complete(const binary_tree_t *tree);
+/* Task 22. Rotate left (AKA 103) */
+binary_tree_t *binary_tree_rotate_left(binary_tree_t *tree);
+/* Task 23. Rotate right (AKA 104) */
+binary_tree_t *binary_tree_rotate_right(binary_tree_t *tree);
+/* Task 24. Is BST (AKA 105) */
+int binary_tree_is_bst(const binary_tree_t *tree);
+/* Task 25. BST - Insert (AKA 106) */
+bst_t *bst_insert(bst_t **tree, int value);
+/* Task 26. BST-Array to BST (AKA 107) */
+bst_t *array_to_bst(int *array, size_t size);
+
 #endif /* _BINARY_TREES_H_ */
