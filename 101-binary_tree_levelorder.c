@@ -47,7 +47,7 @@ static void process_depth(const binary_tree_t *tree, int depth,
  * * @tree: pointer to the root of the tree to traverse
  * @func: pointer to a function to call for eah node
  */
-void binary_tree_depthorder(const binary_tree_t *tree, void (*func)(int))
+void binary_tree_levelorder(const binary_tree_t *tree, void (*func)(int))
 {
 	int i, height;
 
