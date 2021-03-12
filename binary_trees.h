@@ -88,4 +88,6 @@ bst_t *bst_insert(bst_t **tree, int value);
 /* Task 26. BST-Array to BST (AKA 107) */
 bst_t *array_to_bst(int *array, size_t size);
 
+/* Task 30. Is AVL */
+int binary_tree_is_avl(const binary_tree_t *tree);
 #endif /* _BINARY_TREES_H_ */
