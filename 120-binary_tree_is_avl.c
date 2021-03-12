@@ -54,7 +54,7 @@ static int bt_is_bst(const binary_tree_t *tree)
 /**
  * is_avl - helps determine if a binary tree is a valid AVL Tree
  * @tree: pointer to root of tree/subtree
- * 
+ *
  * Return: 1 if a valid AVL tree
  */
 static int is_avl(const binary_tree_t *tree)
