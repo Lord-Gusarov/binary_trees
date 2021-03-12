@@ -16,7 +16,7 @@ bst_t *array_to_bst(int *array, size_t size)
 		return (NULL);
 
 	do {
-		bst_insert(&root, array[i]);
+		bst_insert(&root, array[--size]);
 	} while (size > 0);
 
 	return (root);
